@@ -29,3 +29,4 @@ class New(models.Model):
     title = models.fields.CharField(max_length=100)
     article = models.fields.CharField(max_length=1000)
     date = models.fields.DateField(default=date.today)
+    band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
