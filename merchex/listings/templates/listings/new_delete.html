@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Merchex</title>
+        <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
+    </head>
+    <body>
+
+        <h3>Souhaitez vous reellement supprimer l'article "{{new.title}}"</h3>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Supprimer">
+        </form>
+
+        <a href="{% url 'new-detail' new.id %}">Retour</a>
+
+    </body>
+</html>

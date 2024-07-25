@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Merchex</title>
+        <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
+    </head>
+    <body>
+
+        <h3>Souhaitez vous reellement supprimer le groupe "{{band.name}}"</h3>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Supprimer">
+        </form>
+
+        <a href="{% url 'band-detail' band.id %}">Retour</a>
+
+    </body>
+</html>

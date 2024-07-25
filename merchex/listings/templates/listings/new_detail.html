@@ -1,0 +1,16 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ new.title }}</h2>
+<h3>{{ new.article }}</h2>
+<h4>{{ new.date }}</h2>
+{% if new.band %}
+<h3>{{ new.band }}</h2>
+{% endif %}
+
+<p><a href="{% url 'new-update' new.id %}">Modifier</a></p>
+
+<a href="{% url 'news-list' %}">Retour à tous les articles</a>
+
+{% endblock %}
